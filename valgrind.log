@@ -1,0 +1,210 @@
+==122224== Memcheck, a memory error detector
+==122224== Copyright (C) 2002-2012, and GNU GPL'd, by Julian Seward et al.
+==122224== Using Valgrind-3.8.1 and LibVEX; rerun with -h for copyright info
+==122224== Command: php -d extension=/mnt/hgfs/W_FFI/W_FFI/modules/W_FFI.so /mnt/hgfs/W_FFI/W_FFI/test.php
+==122224== Parent PID: 113806
+==122224== 
+--122224-- 
+--122224-- Valgrind options:
+--122224--    --log-file=/mnt/hgfs/W_FFI/W_FFI/valgrind.log
+--122224--    --leak-check=full
+--122224--    --show-reachable=no
+--122224--    --track-origins=yes
+--122224--    --gen-suppressions=all
+--122224--    -v
+--122224-- Contents of /proc/version:
+--122224--   Linux version 2.6.32-642.6.1.el6.x86_64 (mockbuild@worker1.bsys.centos.org) (gcc version 4.4.7 20120313 (Red Hat 4.4.7-17) (GCC) ) #1 SMP Wed Oct 5 00:36:12 UTC 2016
+--122224-- Arch and hwcaps: AMD64, amd64-sse3-cx16-avx
+--122224-- Page sizes: currently 4096, max supported 4096
+--122224-- Valgrind library directory: /usr/lib64/valgrind
+--122224-- Reading syms from /usr/local/bin/php
+--122224-- Reading syms from /usr/lib64/valgrind/memcheck-amd64-linux
+--122224--    object doesn't have a dynamic symbol table
+--122224-- Reading syms from /lib64/ld-2.12.so
+--122224-- Scheduler: using generic scheduler lock implementation.
+--122224-- Reading suppressions file: /usr/lib64/valgrind/default.supp
+==122224== embedded gdbserver: reading from /tmp/vgdb-pipe-from-vgdb-to-122224-by-wmr-on-localhost.localdomain
+==122224== embedded gdbserver: writing to   /tmp/vgdb-pipe-to-vgdb-from-122224-by-wmr-on-localhost.localdomain
+==122224== embedded gdbserver: shared mem   /tmp/vgdb-pipe-shared-mem-vgdb-122224-by-wmr-on-localhost.localdomain
+==122224== 
+==122224== TO CONTROL THIS PROCESS USING vgdb (which you probably
+==122224== don't want to do, unless you know exactly what you're doing,
+==122224== or are doing some strange experiment):
+==122224==   /usr/lib64/valgrind/../../bin/vgdb --pid=122224 ...command...
+==122224== 
+==122224== TO DEBUG THIS PROCESS USING GDB: start GDB like this
+==122224==   /path/to/gdb php
+==122224== and then give GDB the following command
+==122224==   target remote | /usr/lib64/valgrind/../../bin/vgdb --pid=122224
+==122224== --pid is optional if only one valgrind process is running
+==122224== 
+--122224-- REDIR: 0x321fc17d10 (strlen) redirected to 0x38049551 (vgPlain_amd64_linux_REDIR_FOR_strlen)
+--122224-- Reading syms from /usr/lib64/valgrind/vgpreload_core-amd64-linux.so
+--122224-- Reading syms from /usr/lib64/valgrind/vgpreload_memcheck-amd64-linux.so
+--122224-- REDIR: 0x321fc17b20 (index) redirected to 0x4a07c30 (index)
+--122224-- REDIR: 0x321fc17ba0 (strcmp) redirected to 0x4a08570 (strcmp)
+--122224-- Reading syms from /lib64/libcrypt-2.12.so
+--122224-- Reading syms from /lib64/libresolv-2.12.so
+--122224-- Reading syms from /lib64/librt-2.12.so
+--122224-- Reading syms from /usr/lib64/libstdc++.so.6.0.13
+--122224--    object doesn't have a symbol table
+--122224-- Reading syms from /lib64/libm-2.12.so
+--122224-- Reading syms from /lib64/libdl-2.12.so
+--122224-- Reading syms from /lib64/libnsl-2.12.so
+--122224-- Reading syms from /usr/lib64/libxml2.so.2.7.6
+--122224--    object doesn't have a symbol table
+--122224-- Reading syms from /lib64/libz.so.1.2.3
+--122224--    object doesn't have a symbol table
+--122224-- Reading syms from /usr/lib64/libicui18n.so.42.1
+--122224--    object doesn't have a symbol table
+--122224-- Reading syms from /usr/lib64/libicuuc.so.42.1
+--122224--    object doesn't have a symbol table
+--122224-- Reading syms from /usr/lib64/libicudata.so.42.1
+--122224--    object doesn't have a symbol table
+--122224-- Reading syms from /usr/lib64/libicuio.so.42.1
+--122224--    object doesn't have a symbol table
+--122224-- Reading syms from /lib64/libgcc_s-4.4.7-20120601.so.1
+--122224--    object doesn't have a symbol table
+--122224-- Reading syms from /lib64/libc-2.12.so
+--122224-- Reading syms from /lib64/libfreebl3.so
+--122224--    object doesn't have a symbol table
+--122224-- Reading syms from /lib64/libpthread-2.12.so
+--122224-- REDIR: 0x3220484e60 (strcasecmp) redirected to 0x480155c (_vgnU_ifunc_wrapper)
+--122224-- REDIR: 0x3220487120 (strncasecmp) redirected to 0x480155c (_vgnU_ifunc_wrapper)
+--122224-- REDIR: 0x32204812f0 (__GI_strlen) redirected to 0x4a07fb0 (__GI_strlen)
+--122224-- REDIR: 0x3220482dd0 (__GI_strrchr) redirected to 0x4a07ab0 (__GI_strrchr)
+--122224-- REDIR: 0x32204812b0 (strlen) redirected to 0x480155c (_vgnU_ifunc_wrapper)
+--122224-- REDIR: 0x3220533820 (__strlen_sse42) redirected to 0x4a07f90 (strlen)
+--122224-- REDIR: 0x322047aba0 (malloc) redirected to 0x4a069ac (malloc)
+--122224-- REDIR: 0x3220489800 (memcpy) redirected to 0x4a08b60 (memcpy)
+--122224-- REDIR: 0x322047f7c0 (index) redirected to 0x480155c (_vgnU_ifunc_wrapper)
+--122224-- REDIR: 0x32205284a0 (__strchr_sse42) redirected to 0x4a07b40 (index)
+--122224-- REDIR: 0x322047bf00 (realloc) redirected to 0x4a06b57 (realloc)
+--122224-- REDIR: 0x3220483990 (memmove) redirected to 0x4a09af0 (memmove)
+--122224-- REDIR: 0x3220481520 (__GI_strncmp) redirected to 0x4a08470 (__GI_strncmp)
+--122224-- REDIR: 0x3220483b30 (memset) redirected to 0x480155c (_vgnU_ifunc_wrapper)
+--122224-- REDIR: 0x3220483b70 (__GI_memset) redirected to 0x4a09a50 (memset)
+--122224-- REDIR: 0x322047ba00 (free) redirected to 0x4a063a9 (free)
+--122224-- REDIR: 0x3220482da0 (rindex) redirected to 0x480155c (_vgnU_ifunc_wrapper)
+--122224-- REDIR: 0x322052a5b0 (__strrchr_sse42) redirected to 0x4a07a80 (rindex)
+--122224-- REDIR: 0x322047f8b0 (__GI_strcmp) redirected to 0x4a08520 (__GI_strcmp)
+--122224-- REDIR: 0x32204834e0 (memchr) redirected to 0x4a08610 (memchr)
+--122224-- REDIR: 0x322047f7f0 (__GI_strchr) redirected to 0x4a07b70 (__GI_strchr)
+--122224-- REDIR: 0x322048ac80 (strchrnul) redirected to 0x4a09fb0 (strchrnul)
+--122224-- REDIR: 0x3220484d10 (__GI_stpcpy) redirected to 0x4a097e0 (__GI_stpcpy)
+--122224-- REDIR: 0x3220480d30 (__GI_strcpy) redirected to 0x4a080a0 (__GI_strcpy)
+--122224-- REDIR: 0x322052d290 (__strncasecmp_sse42) redirected to 0x4a0a990 (strncasecmp)
+--122224-- REDIR: 0x322052b5f0 (__strcasecmp_sse42) redirected to 0x4a0aae0 (strcasecmp)
+--122224-- REDIR: 0x3220483560 (bcmp) redirected to 0x480155c (_vgnU_ifunc_wrapper)
+--122224-- REDIR: 0x322053e8d0 (__memcmp_sse4_1) redirected to 0x4a09670 (bcmp)
+--122224-- REDIR: 0x322047a800 (calloc) redirected to 0x4a05717 (calloc)
+--122224-- Reading syms from /usr/local/lib/php/extensions/no-debug-non-zts-20160303/memcached.so
+--122224-- Reading syms from /usr/local/libmemcached/lib/libmemcached.so.11.0.0
+--122224-- Reading syms from /usr/local/libmemcached/lib/libmemcachedutil.so.2.0.0
+--122224-- Reading syms from /usr/lib64/libsasl2.so.2.0.23
+--122224--    object doesn't have a symbol table
+--122224-- Reading syms from /usr/local/lib/php/extensions/no-debug-non-zts-20160303/openssl.so
+--122224-- Reading syms from /usr/lib64/libssl.so.1.0.1e
+--122224--    object doesn't have a symbol table
+--122224-- Reading syms from /usr/lib64/libcrypto.so.1.0.1e
+--122224--    object doesn't have a symbol table
+--122224-- Reading syms from /lib64/libgssapi_krb5.so.2.2
+--122224--    object doesn't have a symbol table
+--122224-- Reading syms from /lib64/libkrb5.so.3.3
+--122224--    object doesn't have a symbol table
+--122224-- Reading syms from /lib64/libcom_err.so.2.1
+--122224--    object doesn't have a symbol table
+--122224-- Reading syms from /lib64/libk5crypto.so.3.1
+--122224--    object doesn't have a symbol table
+--122224-- Reading syms from /lib64/libkrb5support.so.0.1
+--122224--    object doesn't have a symbol table
+--122224-- Reading syms from /lib64/libkeyutils.so.1.3
+--122224--    object doesn't have a symbol table
+--122224-- Reading syms from /lib64/libselinux.so.1
+--122224--    object doesn't have a symbol table
+--122224-- REDIR: 0x322047f870 (strcmp) redirected to 0x480155c (_vgnU_ifunc_wrapper)
+--122224-- Reading syms from /usr/local/lib/php/extensions/no-debug-non-zts-20160303/zip.so
+--122224-- Reading syms from /usr/local/lib/php/extensions/no-debug-non-zts-20160303/pdo_mysql.so
+--122224-- Reading syms from /usr/local/lib/php/extensions/no-debug-non-zts-20160303/curl.so
+--122224-- Reading syms from /usr/lib64/libcurl.so.4.1.1
+--122224--    object doesn't have a symbol table
+--122224-- Reading syms from /lib64/libidn.so.11.6.1
+--122224--    object doesn't have a symbol table
+--122224-- Reading syms from /lib64/libldap-2.4.so.2.10.3
+--122224--    object doesn't have a symbol table
+--122224-- Reading syms from /usr/lib64/libssl3.so
+--122224--    object doesn't have a symbol table
+--122224-- Reading syms from /usr/lib64/libsmime3.so
+--122224--    object doesn't have a symbol table
+--122224-- Reading syms from /usr/lib64/libnss3.so
+--122224--    object doesn't have a symbol table
+--122224-- Reading syms from /usr/lib64/libnssutil3.so
+--122224--    object doesn't have a symbol table
+--122224-- Reading syms from /lib64/libplds4.so
+--122224--    object doesn't have a symbol table
+--122224-- Reading syms from /lib64/libplc4.so
+--122224--    object doesn't have a symbol table
+--122224-- Reading syms from /lib64/libnspr4.so
+--122224--    object doesn't have a symbol table
+--122224-- Reading syms from /usr/lib64/libssh2.so.1.0.1
+--122224--    object doesn't have a symbol table
+--122224-- Reading syms from /lib64/liblber-2.4.so.2.10.3
+--122224--    object doesn't have a symbol table
+--122224-- Reading syms from /usr/local/lib/php/extensions/no-debug-non-zts-20160303/redis.so
+--122224-- Reading syms from /mnt/hgfs/W_FFI/W_FFI/modules/W_FFI.so
+--122224-- REDIR: 0x3220528550 (__strcmp_sse42) redirected to 0x4a084d0 (strcmp)
+--122224-- REDIR: 0x3220484690 (mempcpy) redirected to 0x4a0a020 (mempcpy)
+--122224-- REDIR: 0x3220482d70 (strncpy) redirected to 0x480155c (_vgnU_ifunc_wrapper)
+--122224-- REDIR: 0x3220534ce0 (???) redirected to 0x4a08170 (strncpy)
+--122224-- REDIR: 0x321fc18c40 (stpcpy) redirected to 0x4a09980 (stpcpy)
+--122224-- REDIR: 0xffffffffff600400 (???) redirected to 0x3804953d (vgPlain_amd64_linux_REDIR_FOR_vtime)
+--122224-- REDIR: 0xffffffffff600000 (???) redirected to 0x38049533 (vgPlain_amd64_linux_REDIR_FOR_vgettimeofday)
+--122224-- REDIR: 0x322048e650 (strstr) redirected to 0x480155c (_vgnU_ifunc_wrapper)
+--122224-- REDIR: 0x322052a750 (__strstr_sse42) redirected to 0x4a0a200 (strstr)
+--122224-- REDIR: 0x322047f600 (strcat) redirected to 0x4a07c60 (strcat)
+--122224-- Reading syms from /lib/test/main.so
+==122224== 
+==122224== HEAP SUMMARY:
+==122224==     in use at exit: 63,752 bytes in 239 blocks
+==122224==   total heap usage: 25,848 allocs, 25,609 frees, 3,156,129 bytes allocated
+==122224== 
+==122224== Searching for pointers to 239 not-freed blocks
+==122224== Checked 1,920,080 bytes
+==122224== 
+==122224== 6,100 (224 direct, 5,876 indirect) bytes in 1 blocks are definitely lost in loss record 107 of 110
+==122224==    at 0x4A06A2E: malloc (vg_replace_malloc.c:270)
+==122224==    by 0x7586D8: zend_compile (zend_language_scanner.l:590)
+==122224==    by 0x759D1A: compile_file (zend_language_scanner.l:633)
+==122224==    by 0x63591E: phar_compile_file (phar.c:3305)
+==122224==    by 0x79180A: zend_execute_scripts (zend.c:1458)
+==122224==    by 0x73173F: php_execute_script (main.c:2533)
+==122224==    by 0x83B189: do_cli (php_cli.c:990)
+==122224==    by 0x83B989: main (php_cli.c:1378)
+==122224== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   fun:malloc
+   fun:zend_compile
+   fun:compile_file
+   fun:phar_compile_file
+   fun:zend_execute_scripts
+   fun:php_execute_script
+   fun:do_cli
+   fun:main
+}
+==122224== LEAK SUMMARY:
+==122224==    definitely lost: 224 bytes in 1 blocks
+==122224==    indirectly lost: 5,876 bytes in 16 blocks
+==122224==      possibly lost: 0 bytes in 0 blocks
+==122224==    still reachable: 57,652 bytes in 222 blocks
+==122224==         suppressed: 0 bytes in 0 blocks
+==122224== Reachable blocks (those to which a pointer was found) are not shown.
+==122224== To see them, rerun with: --leak-check=full --show-reachable=yes
+==122224== 
+==122224== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 6 from 6)
+--122224-- 
+--122224-- used_suppression:      4 U1004-ARM-_dl_relocate_object
+--122224-- used_suppression:      2 glibc-2.5.x-on-SUSE-10.2-(PPC)-2a
+==122224== 
+==122224== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 6 from 6)

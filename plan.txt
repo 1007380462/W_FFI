@@ -1,0 +1,12 @@
+>>php call this extension
+>>extension call construct function to load other dynamic library
+>>get dynamic library handle and then to call function in the library
+>>get function handle and then call function after transfer parameters to function,
+parameters include request parameter and return parameter.
+the request parameter usually is array ,number type is rarely,
+return parameter is number or array along array is using quote way to call
+>>
+this project decide request must array
+need request parameter and return parameter
+
+
